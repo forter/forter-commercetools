@@ -1,0 +1,62 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "typeId": "payment",
+            "id": "d7d64f80-37aa-4973-b4ec-9dfeeea6f334",
+            "obj": {
+                "id": "d7d64f80-37aa-4973-b4ec-9dfeeea6f334",
+                "version": 6,
+                "versionModifiedAt": "2023-12-06T10:14:38.117Z",
+                "lastMessageSequenceNumber": 2,
+                "createdAt": "2023-12-06T10:12:33.512Z",
+                "lastModifiedAt": "2023-12-06T10:14:38.117Z",
+                "lastModifiedBy": {
+                    "clientId": "forter-commercetools-app-test",
+                    "isPlatformClient": false
+                },
+                "createdBy": {
+                    "clientId": "forter-commercetools-app-test",
+                    "isPlatformClient": false
+                },
+                "key": "forter-test-payment-approve-auto-6570491107a8a",
+                "interfaceId": "forter-test-payment-stripe-auto-6570491107a8a",
+                "amountPlanned": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 8247,
+                    "fractionDigits": 2
+                },
+                "paymentMethodInfo": {
+                    "paymentInterface": "stripe",
+                    "method": "credit_card",
+                    "name": {
+                        "en": "credit_card"
+                    }
+                },
+                "custom": {
+                    "type": {
+                        "typeId": "type",
+                        "id": "78922641-d386-439a-aea9-a30562e92fc6"
+                    },
+                    "fields": {
+                        "fingerprint": "Xt5EWLLDS7FJjR1c",
+                        "fullResponsePayload": "",
+                        "cardBin": "411111",
+                        "nameOnCard": "Tester Forter",
+                        "expirationMonth": "03",
+                        "cardBrand": "VISA",
+                        "countryOfIssuance": "US",
+                        "lastFourDigits": "1142",
+                        "expirationYear": "2030",
+                        "paymentProcessorData": "{\"processorMerchantId\":\"ncxwe5490asjdf\",\"processorName\":\"Chase Paymentech\",\"processorTransactionId\":\"fjdsS46sdklFd20\"}",
+                        "cardBank": "Chase",
+                        "cardType": "CREDIT"
+                    }
+                },
+                "paymentStatus": [],
+                "transactions": [],
+                "interfaceInteractions": []
+            }
+        }]
+    }
+}
