@@ -1,0 +1,69 @@
+<?php
+/**
+ * Forter Commercetools app
+ *
+ * @package  Forter Commercetools app
+ * @author   Forter (https://www.forter.com/)
+ * @author   Developer: Pniel Cohen (Trus)
+ */
+
+namespace App\Services\Forter\RecommendationHandlers\Custom;
+
+use App\Services\Forter\RecommendationHandlers\AbstractForterRecommendationHandler;
+
+class IdVerificationRequiredHandler extends AbstractForterRecommendationHandler
+{
+    // Event props (from parent)
+    //
+    // $this->getRecommendation();
+    // $this->getForterResponse();
+    // $this->getOrder();
+    // $this->getAuthStep();
+
+    /**
+     * Handle recommendation and maybe return array with actions/errors.
+     * @return array
+     */
+    protected function handleRecommendation()
+    {
+        // Nothing special, proceed normally
+        return [];
+
+        // Return errors with a 400 http code (will work on pre-auth only)
+        /*return [
+            'errors' => [
+                [
+                    "code" => "InvalidOperation",
+                    "message" => 'Some error message...',
+                ],
+            ],
+        ];*/
+
+        // Return actions that would be added to the default/configured decision actions
+        /*return [
+            'actions' => [
+                [
+                    "code" => "changeOrderState",
+                    "orderState" => 'Cancelled',
+                ],
+            ],
+        ];*/
+
+        // Return actions that would run *instead* of the default/configured decision actions
+        /*return [
+            'only' = true,
+            'actions' => [
+                [
+                    "code" => "changeOrderState",
+                    "orderState" => 'Cancelled',
+                ],
+            ],
+        ];*/
+
+        // "Do Nothing" action (prevent default/configured decision actions)
+        /*return [
+            'only' = true,
+            'actions' => [],
+        ];*/
+    }
+}

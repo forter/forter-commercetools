@@ -1,0 +1,155 @@
+<?php
+/**
+ * Forter Commercetools app
+ *
+ * Map Forter schema fields to Commercetools fields ("forter-field-name" => "custom-field-name").
+ *
+ * Use this file to set your custom mapping (it'll override the values on forter_schema_mapping.php)
+ * Duplicate this example file and name it 'forter_schema_custom_mapping.php' for a quick start.
+ * Then, set your mapping as instructed on: ../docs/forter-schema-custom-mapping-guide.md
+ */
+
+return [
+
+    /**
+      * custom.{fieldName} or {fieldName} => look in the order's custom fields (default)
+     */
+    'order' => [
+        //'orderId' => 'orderNumber', // Uncommect for using 'orderNumber' as orderId (instead of 'id')
+
+        'connectionInformation' => [
+            'customerIP' => 'customerIP',                             // Map to the order custom-field that holds the customer IP.
+            'forterMobileUID' => 'forterMobileUID',                   // Map to the order custom-field that holds the forterMobileUID (if used).
+            'forterTokenCookie' => 'forterToken',                     // Map to the order custom-field that holds the Forter token.
+            'merchantDeviceIdentifier' => 'merchantDeviceIdentifier', // Map to the order custom-field that holds the merchantDeviceIdentifier (if used).
+            'userAgent' => 'customerUserAgent',                       // Map to the order custom-field that holds the customer user-agent.
+        ],
+    ],
+
+    /**
+     * Map the paymentMethodInfo[method] name to Forter's payment schema type
+     */
+    'payment_method_schema_type' => [
+        'cc' => 'creditCard',
+        'credit_card' => 'creditCard',
+        'visa' => 'creditCard',
+        'paypal' => 'paypal',
+        'applepay' => 'applePay',
+        'paybright' => 'installmentService',
+        /* Route any local/custom payment method (paymentMethodInfo[method]). Replace spaces with underscores */
+    ],
+
+    /**
+      * payment.{fieldName} => look in the payment root object
+      * paymentMethodInfo.{fieldName} => look in the payment's paymentMethodInfo object
+      * custom.{fieldName} or {fieldName} => look in the payment's custom fields (default)
+     */
+    'payment' => [
+        'creditCard' => [
+            // Defaults:
+            "bin" => "cardBin",
+            "cardBank" => "cardBank",
+            "cardBrand" => "cardBrand",
+            "cardType" => "cardType",
+            "countryOfIssuance" => "countryOfIssuance",
+            "expirationMonth" => "expirationMonth",
+            "expirationYear" => "expirationYear",
+            "nameOnCard" => "nameOnCard",
+            "lastFourDigits" => "lastFourDigits",
+            "fingerprint" => "fingerprint",
+            "fullResponsePayload" => "fullResponsePayload",
+            "paymentProcessorData" => "paymentProcessorData",
+            "verificationResults" => "verificationResults",
+
+            // PaymentInterface specific:
+            'stripe' => [
+                // "bin" => "cardBin",
+                // "cardBank" => "cardBank",
+                // ...
+            ],
+
+            // PaymentInterface specific:
+            'adyen' => [
+                // "bin" => "cardBin",
+                // "cardBank" => "cardBank",
+                // ...
+            ],
+        ],
+
+        'paypal' => [
+            "authorizationId" => "authorizationId",
+            "payerAccountCountry" => "payerAccountCountry",
+            "payerAddressStatus" => "payerAddressStatus",
+            "payerEmail" => "payerEmail",
+            "payerId" => "payerId",
+            "payerStatus" => "payerStatus",
+            "paymentGatewayData" => [
+                "gatewayName" => "paymentMethodInfo.method",
+                "gatewayTransactionId" => "gatewayTransactionId",
+            ],
+            "paymentId" => "paymentId",
+            "paymentStatus" => "paymentStatus",
+            "fullPaypalResponsePayload" => "fullPaypalResponsePayload",
+            "protectionEligibility" => "protectionEligibility",
+
+            // PaymentInterface specific:
+            'adyen' => [
+                // "authorizationId" => "authorizationId",
+                // "payerAccountCountry" => "payerAccountCountry",
+                // ...
+            ],
+        ],
+
+        'applePay' => [
+            "cardBank" => "cardBank",
+            "cardBrand" => "cardBrand",
+            "cardType" => "cardType",
+            "countryOfIssuance" => "countryOfIssuance",
+            "creationTime" => "creationTime",
+            "expirationMonth" => "expirationMonth",
+            "expirationYear" => "expirationYear",
+            "nameOnCard" => "nameOnCard",
+            "lastFourDigits" => "lastFourDigits",
+            "fingerprint" => "fingerprint",
+            "token" => "token",
+            "fullResponsePayload" => "fullResponsePayload",
+            "paymentProcessorData" => "paymentProcessorData",
+            "verificationResults" => "verificationResults",
+
+            // PaymentInterface specific:
+            // ...
+        ],
+
+        'androidPay' => [
+            "bin" => "cardBin",
+            "cardBank" => "cardBank",
+            "cardBrand" => "cardBrand",
+            "cardType" => "cardType",
+            "countryOfIssuance" => "countryOfIssuance",
+            "creationTime" => "creationTime",
+            "expirationMonth" => "expirationMonth",
+            "expirationYear" => "expirationYear",
+            "nameOnCard" => "nameOnCard",
+            "lastFourDigits" => "lastFourDigits",
+            "fingerprint" => "fingerprint",
+            "token" => "token",
+            "threeDSecure" => "threeDSecureData",
+            "fullResponsePayload" => "fullResponsePayload",
+            "paymentProcessorData" => "paymentProcessorData",
+            "verificationResults" => "verificationResults",
+
+            // PaymentInterface specific:
+            // ...
+        ],
+
+        'installmentService' => [
+            "serviceName" => 'cardType',
+            "serviceResponseCode" => 'serviceResponseCode',
+            "paymentId" => 'transactionId',
+            "fullResponsePayload" => 'fullResponsePayload'
+
+            // PaymentInterface specific:
+            // ...
+        ]
+    ]
+];

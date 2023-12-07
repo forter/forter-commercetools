@@ -1,0 +1,159 @@
+{
+    "additionalInformation": {},
+    "deliveryStatusInfo": {
+        "additionalShippingInfo": "PO Box 3297",
+        "carrier": "UPS",
+        "customerOpenedEmail": false,
+        "proofOfShippingURL": "true",
+        "signedProofOfShipping": true,
+        "trackingNumber": "123456"
+    },
+    "eventId": "r48987fgdse0r",
+    "eventTime": 1415287568000,
+    "orderId": "2356fdse0rr489",
+    "payment": [{
+        "amount": {
+            "amountLocalCurrency": "105.55",
+            "amountUSD": "99.95",
+            "currency": "CAD"
+        },
+        "applePay": {
+            "cardBank": "Chase",
+            "cardBrand": "VISA",
+            "cardType": "CREDIT",
+            "countryOfIssuance": "US",
+            "creationTime": 1430997968,
+            "expirationMonth": "03",
+            "expirationYear": "2018",
+            "fullResponsePayload": {},
+            "lastFourDigits": "4242",
+            "nameOnCard": "John R. H. Smith",
+            "paymentProcessorData": {
+                "processorMerchantId": "ncxwe5490asjdf",
+                "processorName": "Chase Paymentech",
+                "processorTransactionId": "fjdsS46sdklFd20"
+            },
+            "token": "tkn-77620C360132856A103477D2959967AB",
+            "verificationResults": {
+                "authenticationMethodType": "THREE_DS",
+                "authorizationCode": "A33244",
+                "avsFullResult": "Y",
+                "avsNameResult": "M",
+                "cvvResult": "M",
+                "processorResponseCode": "D23",
+                "processorResponseText": "Stolen card"
+            }
+        },
+        "billingDetails": {
+            "address": {
+                "address1": "235 Montgomery st.",
+                "address2": "Ste. 1110",
+                "city": "San Francisco",
+                "country": "US",
+                "region": "CA",
+                "savedData": {
+                    "usedSavedData": true
+                },
+                "zip": "94104"
+            },
+            "personalDetails": {
+                "fullName": "John Smith"
+            },
+            "phone": [{
+                "phone": "15557654321"
+            }]
+        },
+        "creditCard": {
+            "bin": "42424242",
+            "cardBank": "Chase",
+            "cardBrand": "VISA",
+            "cardType": "CREDIT",
+            "countryOfIssuance": "US",
+            "expirationMonth": "03",
+            "expirationYear": "2018",
+            "fingerprint": "Xt5EWLLDS7FJjR1c",
+            "fullResponsePayload": {},
+            "lastFourDigits": "4242",
+            "nameOnCard": "John R. H. Smith",
+            "paymentProcessorData": {
+                "processorMerchantId": "ncxwe5490asjdf",
+                "processorName": "Chase Paymentech",
+                "processorTransactionId": "fjdsS46sdklFd20"
+            },
+            "verificationResults": {
+                "authenticationMethodType": "THREE_DS",
+                "authorizationCode": "A33244",
+                "avsFullResult": "Y",
+                "avsNameResult": "M",
+                "cvvResult": "M",
+                "processorResponseCode": "D23",
+                "processorResponseText": "Stolen card"
+            }
+        },
+        "giftCard": {
+            "activationTime": 1448549922,
+            "creditCurrency": "CAD",
+            "creditOrigin": "CS Compensation",
+            "merchantPaymentId": "eab12-ba9a-367-60b",
+            "value": {
+                "amountLocalCurrency": "105.55",
+                "amountUSD": "99.95",
+                "currency": "CAD"
+            }
+        },
+        "loyaltyPoints": {
+            "loyaltyPointsCount": 1506,
+            "loyaltyPointsSource": "IN_ACCOUNT_PURCHASES",
+            "merchantPaymentId": "eab12-ba9a-367-60b"
+        },
+        "numberOfInstallments": 12,
+        "paymentMethodNickname": "My Work Card",
+        "paypal": {
+            "authorizationId": "2WC75407LV7300439",
+            "fullPaypalResponsePayload": {},
+            "payerAccountCountry": "US",
+            "payerAddressStatus": "CONFIRMED",
+            "payerEmail": "john_s@test.com",
+            "payerId": "FD000A45P",
+            "payerStatus": "VERIFIED",
+            "paymentGatewayData": {
+                "gatewayName": "Braintree",
+                "gatewayTransactionId": "fjdsS46sdklFd20"
+            },
+            "paymentId": "PAY-0MB00000KR8073311KZSDEYA",
+            "paymentStatus": "COMPLETED",
+            "protectionEligibility": "ELIGIBLE"
+        },
+        "savedData": {
+            "usedSavedData": true
+        },
+        "storeCreditUsed": {
+            "activationTime": 1448549922,
+            "creditCurrency": "CAD",
+            "creditOrigin": "CS Compensation",
+            "merchantPaymentId": "eab12-ba9a-367-60b",
+            "value": {
+                "amountLocalCurrency": "105.55",
+                "amountUSD": "99.95",
+                "currency": "CAD"
+            }
+        }
+    }],
+    "statusChangeReason": "Fraud_Team_Manual_Decline",
+    "updatedMerchantStatus": "Shipped",
+    "updatedStatus": "SENT",
+    "updatedTotalAmount": {
+        "amountLocalCurrency": "105.55",
+        "amountUSD": "99.95",
+        "currency": "CAD"
+    },
+    "verificationResults": {
+        "authenticationMethodType": "THREE_DS",
+        "authorizationCode": "A33244",
+        "avsFullResult": "Y",
+        "avsNameResult": "M",
+        "cvvResult": "M",
+        "processorResponseCode": "D23",
+        "processorResponseText": "Stolen card"
+    }
+}
