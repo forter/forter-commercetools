@@ -1,6 +1,6 @@
 {
     "type": "Order",
-    "id": "855cb6c0-0b80-4fd6-8b53-2e7f0b51094d",
+    "id": "forter-commercetools-app-unit-test",
     "version": 5,
     "versionModifiedAt": "2023-12-06T10:14:38.833Z",
     "lastMessageSequenceNumber": 5,
@@ -16,7 +16,7 @@
     },
     "orderNumber": "forter-commercetools-app-unit-test",
     "customerId": "20205522-063f-45bd-a7c1-ae1156ea8b09",
-    "customerEmail": "approve@forter.com",
+    "customerEmail": "tester@forter.com",
     "totalPrice": {
         "type": "centPrecision",
         "currencyCode": "USD",
@@ -84,7 +84,7 @@
             "fractionDigits": 2
         }
     },
-    "orderState": "Confirmed",
+    "orderState": "Open",
     "paymentState": "Paid",
     "syncInfo": [],
     "returnInfo": [],
@@ -190,7 +190,7 @@
         "apartment": "Ste. 2220",
         "phone": "15598754654",
         "mobile": "15598754654",
-        "email": "approve@forter.com"
+        "email": "tester@forter.com"
     },
     "shipping": [],
     "lineItems": [{
@@ -545,7 +545,7 @@
                 "isPlatformClient": false
             },
             "customerId": "20205522-063f-45bd-a7c1-ae1156ea8b09",
-            "customerEmail": "approve@forter.com",
+            "customerEmail": "tester@forter.com",
             "lineItems": [{
                     "id": "d00281cb-8a91-42e2-851e-4d5286701088",
                     "productId": "f2069cfc-16db-45d0-8510-f3214f4213cf",
@@ -1031,7 +1031,7 @@
                 "apartment": "Ste. 2220",
                 "phone": "15598754654",
                 "mobile": "15598754654",
-                "email": "approve@forter.com"
+                "email": "tester@forter.com"
             },
             "shipping": [],
             "customLineItems": [],
@@ -1075,7 +1075,7 @@
                 "apartment": "Ste. 1110",
                 "phone": "15557654321",
                 "mobile": "15557654321",
-                "email": "approve@forter.com"
+                "email": "tester@forter.com"
             },
             "itemShippingAddresses": [],
             "store": {
@@ -1114,7 +1114,7 @@
         "apartment": "Ste. 1110",
         "phone": "15557654321",
         "mobile": "15557654321",
-        "email": "approve@forter.com"
+        "email": "tester@forter.com"
     },
     "itemShippingAddresses": [],
     "refusedGifts": [],

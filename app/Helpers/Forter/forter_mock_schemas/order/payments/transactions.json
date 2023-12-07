@@ -1,0 +1,27 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "obj": {
+                "transactions": [{
+                    "id": "9de39835-d0f9-4b30-a7e8-0b86da4c85d1",
+                    "timestamp": "2023-12-06T10:12:36.000Z",
+                    "type": "Charge",
+                    "amount": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 8247,
+                        "fractionDigits": 2
+                    },
+                    "state": "Success",
+                    "custom": {
+                        "type": {
+                            "typeId": "type",
+                            "id": "78922641-d386-439a-aea9-a30562e92fc6"
+                        },
+                        "fields": {}
+                    }
+                }]
+            }
+        }]
+    }
+}

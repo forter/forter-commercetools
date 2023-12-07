@@ -1,0 +1,15 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "obj": {
+                "paymentMethodInfo": {
+                    "paymentInterface": "stripe",
+                    "method": "credit_card",
+                    "name": {
+                        "en": "Credit Card"
+                    }
+                }
+            }
+        }]
+    }
+}

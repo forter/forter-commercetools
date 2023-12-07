@@ -1,0 +1,15 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "obj": {
+                "paymentMethodInfo": {
+                    "paymentInterface": "paypal",
+                    "method": "braintree",
+                    "name": {
+                        "en": "Braintree"
+                    }
+                }
+            }
+        }]
+    }
+}

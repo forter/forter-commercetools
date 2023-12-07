@@ -1,0 +1,26 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "obj": {
+                "custom": {
+                    "fields": {
+                        "fingerprint": "Xt5EWLLDS7FJjR1c",
+                        "fullResponsePayload": "",
+                        "customFieldNameForFullResponsePayload": "{\"CCC\":\"DDD\"}",
+                        "cardBin": "411111",
+                        "nameOnCard": "Tester Forter",
+                        "expirationMonth": "03",
+                        "cardBrand": "VISA",
+                        "countryOfIssuance": "US",
+                        "lastFourDigits": "1142",
+                        "expirationYear": "2030",
+                        "paymentProcessorData": "{\"processorMerchantId\":\"ncxwe5490asjdf\",\"processorName\":\"Chase Paymentech\",\"processorTransactionId\":\"fjdsS46sdklFd20\"}",
+                        "cardBank": "Chase",
+                        "cardType": "CREDIT",
+                        "verificationResults": "{\"authenticationMethodType\":\"THREE_DS\",\"authorizationCode\":\"A33244\",\"avsFullResult\":\"Y\",\"avsNameResult\":\"M\",\"cvvResult\":\"M\",\"processorResponseCode\":\"D23\",\"processorResponseText\":\"Stolen card\"}"
+                    }
+                }
+            }
+        }]
+    }
+}

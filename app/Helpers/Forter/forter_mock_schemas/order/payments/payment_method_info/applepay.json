@@ -1,0 +1,15 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "obj": {
+                "paymentMethodInfo": {
+                    "paymentInterface": "applepay",
+                    "method": "applepay",
+                    "name": {
+                        "en": "ApplePay"
+                    }
+                }
+            }
+        }]
+    }
+}

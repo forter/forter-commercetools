@@ -47,12 +47,24 @@ class ForterCommercetoolsModel extends ForterAbstractModel
     public function setData($data)
     {
         $data = UtilsHelper::toArrayRecursive($data);
-        $type = isset($data['type']) ? $data['type'] : null;
-        if (self::EXPECTED_COMMERCETOOLS_TYPE && $type !== self::EXPECTED_COMMERCETOOLS_TYPE) {
-            throw new \Exception("Can't instatiate " . __CLASS__ . ". Expected data[type] to be '" . self::EXPECTED_COMMERCETOOLS_TYPE . "', '{$type}' given.", 1);
-        }
+        $data = !empty($data['obj']['id']) ? $data['obj'] : $data;
+        $this->dataValidationOnSet($data);
         $this->resetData();
         $this->_data = $data;
+        return $this;
+    }
+
+    /**
+     * @method dataValidationOnSet
+     * @param  array|object   $data
+     * @return self           $this
+     */
+    protected function dataValidationOnSet($data)
+    {
+        $type = isset($data['type']) ? $data['type'] : null;
+        if (static::EXPECTED_COMMERCETOOLS_TYPE && $type && $type !== static::EXPECTED_COMMERCETOOLS_TYPE) {
+            throw new \Exception("Can't instatiate " . __CLASS__ . ". Expected data[type] to be '" . static::EXPECTED_COMMERCETOOLS_TYPE . "', '{$type}' given.", 1);
+        }
         return $this;
     }
 

@@ -38,20 +38,7 @@
                         "typeId": "type",
                         "id": "78922641-d386-439a-aea9-a30562e92fc6"
                     },
-                    "fields": {
-                        "fingerprint": "Xt5EWLLDS7FJjR1c",
-                        "fullResponsePayload": "",
-                        "cardBin": "411111",
-                        "nameOnCard": "Tester Forter",
-                        "expirationMonth": "03",
-                        "cardBrand": "VISA",
-                        "countryOfIssuance": "US",
-                        "lastFourDigits": "1142",
-                        "expirationYear": "2030",
-                        "paymentProcessorData": "{\"processorMerchantId\":\"ncxwe5490asjdf\",\"processorName\":\"Chase Paymentech\",\"processorTransactionId\":\"fjdsS46sdklFd20\"}",
-                        "cardBank": "Chase",
-                        "cardType": "CREDIT"
-                    }
+                    "fields": {}
                 },
                 "paymentStatus": [],
                 "transactions": [],

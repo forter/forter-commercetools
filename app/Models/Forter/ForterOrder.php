@@ -28,7 +28,7 @@ class ForterOrder extends ForterCommercetoolsModel
     /**
      * @var string
      */
-    public const EXPECTED_COMMERCETOOLS_TYPE = 'Payment';
+    public const EXPECTED_COMMERCETOOLS_TYPE = 'Order';
 
     /**
      * Forter Cart model
@@ -54,15 +54,23 @@ class ForterOrder extends ForterCommercetoolsModel
      */
     public function getData($refresh = false)
     {
+        $payments = [];
+        foreach ($this->getPayments($refresh) as $payment) {
+            $payments[] = [
+                'obj' => $payment
+            ];
+        }
         return array_replace(
             $this->getOrderData(),
             [
                 'paymentInfo' => [
-                    'payments' => $this->getPayments($refresh),
+                    'payments' => $payments,
                 ],
             ],
             [
-                'cart' => $this->getCart($refresh),
+                'cart' => [
+                    'obj' => $this->getCart($refresh),
+                ],
             ],
             [
                 'forterOrderId' => $this->getForterOrderId($refresh),
@@ -111,17 +119,17 @@ class ForterOrder extends ForterCommercetoolsModel
     public function getCart($refresh = false)
     {
         if (is_null($this->cart) || $refresh) {
+            $cart = [];
             if (!empty($this->_data['cart']['id'])) {
-                $cart = $this->_data['cart'];
-                if (!isset($cart['version'])) {
+                if (empty($this->_data['cart']['obj'])) {
                     try {
-                        $cart = CommercetoolsCartsService::getById($cart['id']);
+                        $cart = CommercetoolsCartsService::getById($this->_data['cart']['id']);
                     } catch (NotFoundException $e) {
                         // Ignore errors if cart not found (carts may be deleted after a while)
                     }
+                } else {
+                    $cart = $this->_data['cart']['obj'];
                 }
-            } else {
-                $cart = [];
             }
             $this->cart =  ForterCart::getInstance($cart);
         }
@@ -140,8 +148,10 @@ class ForterOrder extends ForterCommercetoolsModel
             if (isset($this->_data['paymentInfo']['payments'])) {
                 $this->payments = [];
                 foreach ((array) $this->_data['paymentInfo']['payments'] as $payment) {
-                    if (!isset($payment['version'])) {
+                    if (empty($payment['obj'])) {
                         $payment = CommercetoolsPaymentsService::getById($payment['id']);
+                    } else {
+                        $payment = $payment['obj'];
                     }
                     $this->payments[] = ForterPayment::getInstance($payment);
                 }

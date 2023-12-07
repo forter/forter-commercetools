@@ -26,23 +26,30 @@ class CommercetoolsExtensionsGuard
     {
         // Return 401 if authorization header is missing or incorrect
         if (!UtilsHelper::checkCommercetoolsApiExtensionsBasicAuthSecret($request->header('authorization'))) {
-            Log::error('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] 401 unauthorized', ['authorizationHeader' => $request->header('authorization'), 'content' => $request->getContent(), "params" => $request->all(), 'request' => $request]);
+            Log::error('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] 401 unauthorized', ['authorizationHeader' => $request->header('authorization'), 'correlation_id' => $request->header('x-correlation-id'), 'content' => $request->getContent(), "params" => $request->all(), 'request' => $request]);
             return response()->noContent(401);
         }
 
+        // If test request is detected - maybe set runtime config
+        $this->maybeSetTestRuntimeConfig($request);
+
         // Return 200 if app is disabled
         if (!UtilsHelper::isForterEnabled()) {
-            Log::warning('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] [SKIPPING] ' . UtilsHelper::APP_IS_DISABLED_MSG, ['authorizationHeader' => $request->header('authorization'), 'content' => $request->getContent(), 'request' => $request]);
+            Log::warning('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] [SKIPPING] ' . UtilsHelper::APP_IS_DISABLED_MSG, ['authorizationHeader' => $request->header('authorization'), 'correlation_id' => $request->header('x-correlation-id'), 'content' => $request->getContent(), 'request' => $request]);
             return response()->noContent(200);
         }
 
         // Return 200 if pre-auth is disabled
         if (!UtilsHelper::isForterPreOrderValidationEnabled()) {
-            Log::warning('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] [SKIPPING] Forter pre-auth order validation is currently disabled by configuration.', ['authorizationHeader' => $request->header('authorization'), 'content' => $request->getContent(), 'request' => $request]);
+            Log::warning('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] [SKIPPING] Forter pre-auth order validation is currently disabled by configuration.', ['authorizationHeader' => $request->header('authorization'), 'correlation_id' => $request->header('x-correlation-id'), 'content' => $request->getContent(), 'request' => $request]);
             return response()->noContent(200);
         }
 
-        // If test request is detected - maybe set runtime config
+        return $next($request);
+    }
+
+    private function maybeSetTestRuntimeConfig(Request $request)
+    {
         if ($request->header('x-correlation-id') === 'forter-commercetools-app-test') {
             $testData = $request->input('_test') ? \json_decode(decrypt($request->input('_test')), true) : [];
             Log::debug('POST /commercetools/api/extensions [CommercetoolsExtensionsGuard] [TEST] ', ['test_request_input' => $testData, 'content' => $request->getContent(), 'request' => $request]);
@@ -50,7 +57,5 @@ class CommercetoolsExtensionsGuard
                 config($testData['config']);
             }
         }
-
-        return $next($request);
     }
 }
