@@ -1,0 +1,13 @@
+{
+    "custom": {
+        "type": {
+            "typeId": "type",
+            "id": "c45c2887-05b5-482a-bc30-05e3dfabf223"
+        },
+        "fields": {
+            "customerIP": "127.0.0.1",
+            "customerUserAgent": "Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36",
+            "forterToken": "02b78690cd7e43afbdeb9f3bf219eb2c_1699814785233__UDF43-m4_15ck_tt"
+        }
+    }
+}

@@ -301,7 +301,8 @@ class ForterTestHelper
         }
 
         foreach ((array) $order['paymentInfo']['payments'] as &$payment) {
-            $payment = UtilsHelper::toArrayRecursive(CommercetoolsPaymentsService::getById($payment['id']));
+            $paymentId = !empty($payment['obj']['id']) ? $payment['obj']['id'] : $payment['id'];
+            $payment = UtilsHelper::toArrayRecursive(CommercetoolsPaymentsService::getById($paymentId));
             $updateActions = [
                 [
                     "action" => "setCustomType",

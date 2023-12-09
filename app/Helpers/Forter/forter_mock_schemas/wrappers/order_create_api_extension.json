@@ -1,0 +1,8 @@
+{
+    "action": "Create",
+    "resource": {
+        "typeId": "order",
+        "id": "855cb6c0-0b80-4fd6-8b53-2e7f0b51094d",
+        "obj": {}
+    }
+}

@@ -31,6 +31,19 @@ class ForterPayment extends ForterCommercetoolsModel
     private $forterPaymentSchemaType;
 
     /**
+     * @method dataValidationOnSet
+     * @param  array|object   $data
+     * @return self           $this
+     */
+    protected function dataValidationOnSet($data)
+    {
+        if (!isset($data['paymentMethodInfo'])) {
+            return parent::dataValidationOnSet($data);
+        }
+        return $this;
+    }
+
+    /**
      * @method getData
      * @return array
      */

@@ -1,0 +1,1125 @@
+{
+    "type": "Order",
+    "id": "forter-commercetools-app-unit-test",
+    "version": 5,
+    "versionModifiedAt": "2023-12-06T10:14:38.833Z",
+    "lastMessageSequenceNumber": 5,
+    "createdAt": "2023-12-06T10:12:34.118Z",
+    "lastModifiedAt": "2023-12-06T10:14:38.833Z",
+    "lastModifiedBy": {
+        "clientId": "forter-commercetools-app-test",
+        "isPlatformClient": false
+    },
+    "createdBy": {
+        "clientId": "forter-commercetools-app-test",
+        "isPlatformClient": false
+    },
+    "orderNumber": "forter-commercetools-app-unit-test",
+    "customerId": "20205522-063f-45bd-a7c1-ae1156ea8b09",
+    "customerEmail": "tester@forter.com",
+    "totalPrice": {
+        "type": "centPrecision",
+        "currencyCode": "USD",
+        "centAmount": 7497,
+        "fractionDigits": 2
+    },
+    "taxedPrice": {
+        "totalNet": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 7497,
+            "fractionDigits": 2
+        },
+        "totalGross": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 8247,
+            "fractionDigits": 2
+        },
+        "taxPortions": [{
+            "rate": 0.1,
+            "amount": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 750,
+                "fractionDigits": 2
+            },
+            "name": "US"
+        }],
+        "totalTax": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 750,
+            "fractionDigits": 2
+        }
+    },
+    "country": "US",
+    "taxedShippingPrice": {
+        "totalNet": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 0,
+            "fractionDigits": 2
+        },
+        "totalGross": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 0,
+            "fractionDigits": 2
+        },
+        "taxPortions": [{
+            "rate": 0.1,
+            "amount": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+            },
+            "name": "US"
+        }],
+        "totalTax": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 0,
+            "fractionDigits": 2
+        }
+    },
+    "orderState": "Open",
+    "paymentState": "Paid",
+    "syncInfo": [],
+    "returnInfo": [],
+    "taxMode": "Platform",
+    "inventoryMode": "None",
+    "taxRoundingMode": "HalfEven",
+    "taxCalculationMode": "LineItemLevel",
+    "origin": "Merchant",
+    "shippingMode": "Single",
+    "shippingInfo": {
+        "shippingMethodName": "Standard Delivery",
+        "price": {
+            "type": "centPrecision",
+            "currencyCode": "USD",
+            "centAmount": 10000,
+            "fractionDigits": 2
+        },
+        "shippingRate": {
+            "price": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 10000,
+                "fractionDigits": 2
+            },
+            "freeAbove": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 20000,
+                "fractionDigits": 2
+            },
+            "tiers": []
+        },
+        "taxRate": {
+            "name": "US",
+            "amount": 0.1,
+            "includedInPrice": false,
+            "country": "US",
+            "id": "0AB1UIlA",
+            "subRates": []
+        },
+        "taxCategory": {
+            "typeId": "tax-category",
+            "id": "47cd33ed-af77-4949-a2df-236132a4c8d0"
+        },
+        "deliveries": [],
+        "shippingMethod": {
+            "typeId": "shipping-method",
+            "id": "f3656da5-206b-4208-a07d-17a56e7ca7dd"
+        },
+        "discountedPrice": {
+            "value": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+            },
+            "includedDiscounts": [{
+                "discount": {
+                    "typeId": "cart-discount",
+                    "id": "b9e6bcbe-19f9-4497-b458-f9518b43d39e"
+                },
+                "discountedAmount": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 10000,
+                    "fractionDigits": 2
+                }
+            }]
+        },
+        "taxedPrice": {
+            "totalNet": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+            },
+            "totalGross": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+            },
+            "totalTax": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 0,
+                "fractionDigits": 2
+            }
+        },
+        "shippingMethodState": "MatchesCart"
+    },
+    "shippingAddress": {
+        "id": "b706DdYz",
+        "firstName": "Tester",
+        "lastName": "Forter",
+        "streetName": "Montgomery",
+        "streetNumber": "",
+        "postalCode": "83003",
+        "city": "San Francisco",
+        "region": "CA",
+        "country": "US",
+        "company": "Forter",
+        "apartment": "Ste. 2220",
+        "phone": "15598754654",
+        "mobile": "15598754654",
+        "email": "tester@forter.com"
+    },
+    "shipping": [],
+    "lineItems": [{
+            "id": "d00281cb-8a91-42e2-851e-4d5286701088",
+            "productId": "f2069cfc-16db-45d0-8510-f3214f4213cf",
+            "name": {
+                "en-GB": "Maya Pillow Cover",
+                "de-DE": "Maya-Kissenbezug",
+                "en-US": "Maya Pillow Cover"
+            },
+            "productType": {
+                "typeId": "product-type",
+                "id": "63150e48-71e6-47b1-b68c-b45d68db3e8c"
+            },
+            "productSlug": {
+                "en-GB": "maya-pillow-cover",
+                "de-DE": "maya-kissenbezug",
+                "en-US": "maya-pillow-cover"
+            },
+            "variant": {
+                "id": 1,
+                "sku": "MPC-02",
+                "key": "MPC-02",
+                "prices": [{
+                        "id": "00ccb26a-93b2-4808-a505-4538f46fba94",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "EUR",
+                            "centAmount": 899,
+                            "fractionDigits": 2
+                        },
+                        "country": "DE"
+                    },
+                    {
+                        "id": "983ac540-cfdd-4b1b-9182-a706c1491ed8",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "GBP",
+                            "centAmount": 899,
+                            "fractionDigits": 2
+                        },
+                        "country": "GB"
+                    },
+                    {
+                        "id": "57880f39-f6a6-44f5-b0e0-c8ada64ba39f",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "EUR",
+                            "centAmount": 899,
+                            "fractionDigits": 2
+                        },
+                        "country": "GB"
+                    },
+                    {
+                        "id": "889565a5-472b-429a-b29c-5cf695074d6c",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 899,
+                            "fractionDigits": 2
+                        },
+                        "country": "US"
+                    }
+                ],
+                "images": [{
+                    "url": "https:\/\/2eca75039cf911b9bbe5-79bfd3e36f011d786971804e873c4354.ssl.cf3.rackcdn.com\/Maya%20Pillow%20Cover-0UMJUfZy.jpeg",
+                    "dimensions": {
+                        "w": 6240,
+                        "h": 4160
+                    }
+                }],
+                "attributes": [{
+                        "name": "productspec",
+                        "value": {
+                            "en-GB": "- Machine washable\n- Does not include pillow"
+                        }
+                    },
+                    {
+                        "name": "color",
+                        "value": {
+                            "en-GB": "#756960"
+                        }
+                    },
+                    {
+                        "name": "colorlabel",
+                        "value": {
+                            "en-GB": "Mauve"
+                        }
+                    },
+                    {
+                        "name": "product-description",
+                        "value": {
+                            "en-GB": "A microfiber brown pillowcase is a soft and comfortable pillow cover made from synthetic fibers. The microfiber material is designed to be soft and silky to the touch, providing a comfortable and cozy sleeping experience.  The brown color of the pillowcase is typically warm and inviting, creating a cozy and relaxing atmosphere in a bedroom. It can also be a versatile color that matches well with a variety of other colors and decor styles.  Microfiber pillowcases are known for their durability and easy care. They are typically resistant to wrinkles and shrinkage, making them ideal for busy households. They are also hypoallergenic, making them a great option for people with allergies or sensitivities.  Overall, a microfiber brown pillowcase is a practical and comfortable choice for any bedroom. It is soft, durable, and easy to care for, providing a cozy and inviting sleeping environment for a restful night's sleep.",
+                            "en-US": "A microfiber brown pillowcase is a soft and comfortable pillow cover made from synthetic fibers. The microfiber material is designed to be soft and silky to the touch, providing a comfortable and cozy sleeping experience.  The brown color of the pillowcase is typically warm and inviting, creating a cozy and relaxing atmosphere in a bedroom. It can also be a versatile color that matches well with a variety of other colors and decor styles.  Microfiber pillowcases are known for their durability and easy care. They are typically resistant to wrinkles and shrinkage, making them ideal for busy households. They are also hypoallergenic, making them a great option for people with allergies or sensitivities.  Overall, a microfiber brown pillowcase is a practical and comfortable choice for any bedroom. It is soft, durable, and easy to care for, providing a cozy and inviting sleeping environment for a restful night's sleep.",
+                            "de-DE": "Ein brauner Mikrofaser-Kissenbezug ist ein weicher und bequemer Kissenbezug aus synthetischen Fasern. Das Mikrofasermaterial f\u00fchlt sich weich und seidig an und bietet ein komfortables und gem\u00fctliches Schlaferlebnis.  Die braune Farbe des Kissenbezugs ist typisch warm und einladend und schafft eine gem\u00fctliche und entspannende Atmosph\u00e4re in einem Schlafzimmer. Es kann auch eine vielseitige Farbe sein, die gut zu einer Vielzahl anderer Farben und Dekorstile passt.  Kissenbez\u00fcge aus Mikrofaser sind bekannt f\u00fcr ihre Strapazierf\u00e4higkeit und Pflegeleichtigkeit. Sie sind in der Regel knitter- und schrumpffrei und somit ideal f\u00fcr vielbesch\u00e4ftigte Haushalte. Sie sind auch hypoallergen, was sie zu einer gro\u00dfartigen Option f\u00fcr Menschen mit Allergien oder Empfindlichkeiten macht.  Insgesamt ist ein brauner Kissenbezug aus Mikrofaser eine praktische und bequeme Wahl f\u00fcr jedes Schlafzimmer. Es ist weich, strapazierf\u00e4hig und pflegeleicht und bietet eine gem\u00fctliche und einladende Schlafumgebung f\u00fcr einen erholsamen Schlaf."
+                        }
+                    },
+                    {
+                        "name": "color-filter",
+                        "value": {
+                            "key": "#A020F0",
+                            "label": {
+                                "de-DE": "Lila",
+                                "en-GB": "Purple",
+                                "en-US": "Purple"
+                            }
+                        }
+                    }
+                ],
+                "assets": [],
+                "availability": {
+                    "isOnStock": true,
+                    "availableQuantity": 90,
+                    "version": 52,
+                    "id": "f3a99ef8-96af-4634-9b86-1b99c339be2c"
+                }
+            },
+            "price": {
+                "id": "889565a5-472b-429a-b29c-5cf695074d6c",
+                "value": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 899,
+                    "fractionDigits": 2
+                },
+                "country": "US"
+            },
+            "quantity": 2,
+            "discountedPricePerQuantity": [],
+            "taxRate": {
+                "name": "US",
+                "amount": 0.1,
+                "includedInPrice": false,
+                "country": "US",
+                "id": "0AB1UIlA",
+                "subRates": []
+            },
+            "perMethodTaxRate": [],
+            "addedAt": "2023-11-13T23:04:18.226Z",
+            "lastModifiedAt": "2023-11-13T23:04:18.226Z",
+            "state": [{
+                "quantity": 2,
+                "state": {
+                    "typeId": "state",
+                    "id": "d93541e8-27cb-4367-81c0-f65e983c4a26"
+                }
+            }],
+            "priceMode": "Platform",
+            "lineItemMode": "Standard",
+            "totalPrice": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 1798,
+                "fractionDigits": 2
+            },
+            "taxedPrice": {
+                "totalNet": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 1798,
+                    "fractionDigits": 2
+                },
+                "totalGross": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 1978,
+                    "fractionDigits": 2
+                },
+                "totalTax": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 180,
+                    "fractionDigits": 2
+                }
+            },
+            "taxedPricePortions": []
+        },
+        {
+            "id": "a5885e0f-7b4e-413e-893e-452cb08bf5d8",
+            "productId": "ec957ca5-b787-47c5-8ff4-7a8822a3af93",
+            "name": {
+                "en-GB": "Stout Beer Glass",
+                "de-DE": "Starkes Bierglas",
+                "en-US": "Stout Beer Glass"
+            },
+            "productType": {
+                "typeId": "product-type",
+                "id": "63150e48-71e6-47b1-b68c-b45d68db3e8c"
+            },
+            "productSlug": {
+                "en-GB": "stout-beer-glass",
+                "de-DE": "starkes-bierglas",
+                "en-US": "stout-beer-glass"
+            },
+            "variant": {
+                "id": 1,
+                "sku": "SBG-09",
+                "key": "SBG-09",
+                "prices": [{
+                        "id": "7f29a109-8c14-4d5a-b00c-7db88dd3e872",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "EUR",
+                            "centAmount": 5699,
+                            "fractionDigits": 2
+                        },
+                        "country": "DE"
+                    },
+                    {
+                        "id": "27b1d013-6849-47c3-adc2-ce3e78a56f37",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "GBP",
+                            "centAmount": 5699,
+                            "fractionDigits": 2
+                        },
+                        "country": "GB"
+                    },
+                    {
+                        "id": "595e0a67-07f0-4e43-9f55-55f98b9363bf",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "EUR",
+                            "centAmount": 5699,
+                            "fractionDigits": 2
+                        },
+                        "country": "GB"
+                    },
+                    {
+                        "id": "8070ddd3-4c84-4de8-9f62-b52c71a321f0",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 5699,
+                            "fractionDigits": 2
+                        },
+                        "country": "US"
+                    }
+                ],
+                "images": [{
+                    "url": "https:\/\/2eca75039cf911b9bbe5-79bfd3e36f011d786971804e873c4354.ssl.cf3.rackcdn.com\/Stout%20Beer%20Glass-fKjG9_Kd.jpeg",
+                    "dimensions": {
+                        "w": 3000,
+                        "h": 3000
+                    }
+                }],
+                "attributes": [{
+                        "name": "productspec",
+                        "value": {
+                            "en-GB": "- Set includes 6 glasses"
+                        }
+                    },
+                    {
+                        "name": "product-description",
+                        "value": {
+                            "en-GB": "A stout beer glass, also known as a \"pint glass,\" is a type of drinking glass that is designed specifically for serving and enjoying stout beers. It has a short, wide shape with a thick, heavy base that provides stability and balance.  The design of the stout beer glass is intended to enhance the drinking experience by allowing the full range of flavors and aromas of the beer to be appreciated. The wide opening of the glass allows the drinker to fully appreciate the color and clarity of the beer, while the heavy base helps to keep the beer from spilling or tipping over.  Overall, a stout beer glass is a classic and timeless type of drinking glass that is ideal for savoring the rich flavor and aroma of fine stout beers. Its simple yet elegant design makes it a popular choice for beer lovers and casual drinkers alike.",
+                            "en-US": "A stout beer glass, also known as a \"pint glass,\" is a type of drinking glass that is designed specifically for serving and enjoying stout beers. It has a short, wide shape with a thick, heavy base that provides stability and balance.  The design of the stout beer glass is intended to enhance the drinking experience by allowing the full range of flavors and aromas of the beer to be appreciated. The wide opening of the glass allows the drinker to fully appreciate the color and clarity of the beer, while the heavy base helps to keep the beer from spilling or tipping over.  Overall, a stout beer glass is a classic and timeless type of drinking glass that is ideal for savoring the rich flavor and aroma of fine stout beers. Its simple yet elegant design makes it a popular choice for beer lovers and casual drinkers alike.",
+                            "de-DE": "Ein Stout-Bierglas, auch als \"Pintglas\" bekannt, ist eine Art Trinkglas, das speziell zum Servieren und Genie\u00dfen von Stout-Bieren entwickelt wurde. Es hat eine kurze, breite Form mit einer dicken, schweren Basis, die f\u00fcr Stabilit\u00e4t und Gleichgewicht sorgt.  Das Design des Stout-Bierglases soll das Trinkerlebnis verbessern, indem es die volle Geschmacks- und Aromavielfalt des Bieres zur Geltung bringt. Die weite \u00d6ffnung des Glases erm\u00f6glicht es dem Trinker, die Farbe und Klarheit des Bieres voll und ganz zu sch\u00e4tzen, w\u00e4hrend der schwere Boden dazu beitr\u00e4gt, dass das Bier nicht versch\u00fcttet oder umkippt.  Insgesamt ist ein Stout-Bierglas ein klassisches und zeitloses Trinkglas, das sich ideal eignet, um den reichen Geschmack und das Aroma feiner Stout-Biere zu genie\u00dfen. Sein einfaches, aber elegantes Design macht es zu einer beliebten Wahl f\u00fcr Bierliebhaber und Gelegenheitstrinker gleicherma\u00dfen."
+                        }
+                    }
+                ],
+                "assets": [],
+                "availability": {
+                    "isOnStock": true,
+                    "availableQuantity": 98,
+                    "version": 5,
+                    "id": "9956bac3-1873-4007-9737-dc6ffd0c49f7"
+                }
+            },
+            "price": {
+                "id": "8070ddd3-4c84-4de8-9f62-b52c71a321f0",
+                "value": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 5699,
+                    "fractionDigits": 2
+                },
+                "country": "US"
+            },
+            "quantity": 1,
+            "discountedPricePerQuantity": [],
+            "taxRate": {
+                "name": "US",
+                "amount": 0.1,
+                "includedInPrice": false,
+                "country": "US",
+                "id": "0AB1UIlA",
+                "subRates": []
+            },
+            "perMethodTaxRate": [],
+            "addedAt": "2023-11-13T23:04:29.213Z",
+            "lastModifiedAt": "2023-11-13T23:04:29.213Z",
+            "state": [{
+                "quantity": 1,
+                "state": {
+                    "typeId": "state",
+                    "id": "d93541e8-27cb-4367-81c0-f65e983c4a26"
+                }
+            }],
+            "priceMode": "Platform",
+            "lineItemMode": "Standard",
+            "totalPrice": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 5699,
+                "fractionDigits": 2
+            },
+            "taxedPrice": {
+                "totalNet": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 5699,
+                    "fractionDigits": 2
+                },
+                "totalGross": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 6269,
+                    "fractionDigits": 2
+                },
+                "totalTax": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 570,
+                    "fractionDigits": 2
+                }
+            },
+            "taxedPricePortions": []
+        }
+    ],
+    "customLineItems": [],
+    "transactionFee": true,
+    "discountCodes": [],
+    "directDiscounts": [],
+    "cart": {
+        "typeId": "cart",
+        "id": "ff99dd25-3644-4ade-817e-0909bb908d82",
+        "obj": {
+            "type": "Cart",
+            "id": "ff99dd25-3644-4ade-817e-0909bb908d82",
+            "version": 4,
+            "versionModifiedAt": "2023-12-06T10:12:35.880Z",
+            "lastMessageSequenceNumber": 1,
+            "createdAt": "2023-12-06T10:12:33.246Z",
+            "lastModifiedAt": "2023-12-06T10:12:34.118Z",
+            "lastModifiedBy": {
+                "clientId": "forter-commercetools-app-test",
+                "isPlatformClient": false
+            },
+            "createdBy": {
+                "clientId": "forter-commercetools-app-test",
+                "isPlatformClient": false
+            },
+            "customerId": "20205522-063f-45bd-a7c1-ae1156ea8b09",
+            "customerEmail": "tester@forter.com",
+            "lineItems": [{
+                    "id": "d00281cb-8a91-42e2-851e-4d5286701088",
+                    "productId": "f2069cfc-16db-45d0-8510-f3214f4213cf",
+                    "name": {
+                        "en-GB": "Maya Pillow Cover",
+                        "de-DE": "Maya-Kissenbezug",
+                        "en-US": "Maya Pillow Cover"
+                    },
+                    "productType": {
+                        "typeId": "product-type",
+                        "id": "63150e48-71e6-47b1-b68c-b45d68db3e8c",
+                        "version": 1
+                    },
+                    "variant": {
+                        "id": 1,
+                        "sku": "MPC-02",
+                        "key": "MPC-02",
+                        "prices": [{
+                                "id": "00ccb26a-93b2-4808-a505-4538f46fba94",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "EUR",
+                                    "centAmount": 899,
+                                    "fractionDigits": 2
+                                },
+                                "country": "DE"
+                            },
+                            {
+                                "id": "983ac540-cfdd-4b1b-9182-a706c1491ed8",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "GBP",
+                                    "centAmount": 899,
+                                    "fractionDigits": 2
+                                },
+                                "country": "GB"
+                            },
+                            {
+                                "id": "57880f39-f6a6-44f5-b0e0-c8ada64ba39f",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "EUR",
+                                    "centAmount": 899,
+                                    "fractionDigits": 2
+                                },
+                                "country": "GB"
+                            },
+                            {
+                                "id": "889565a5-472b-429a-b29c-5cf695074d6c",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "USD",
+                                    "centAmount": 899,
+                                    "fractionDigits": 2
+                                },
+                                "country": "US"
+                            }
+                        ],
+                        "images": [{
+                            "url": "https:\/\/2eca75039cf911b9bbe5-79bfd3e36f011d786971804e873c4354.ssl.cf3.rackcdn.com\/Maya%20Pillow%20Cover-0UMJUfZy.jpeg",
+                            "dimensions": {
+                                "w": 6240,
+                                "h": 4160
+                            }
+                        }],
+                        "attributes": [{
+                                "name": "productspec",
+                                "value": {
+                                    "en-GB": "- Machine washable\n- Does not include pillow"
+                                }
+                            },
+                            {
+                                "name": "color",
+                                "value": {
+                                    "en-GB": "#756960"
+                                }
+                            },
+                            {
+                                "name": "colorlabel",
+                                "value": {
+                                    "en-GB": "Mauve"
+                                }
+                            },
+                            {
+                                "name": "product-description",
+                                "value": {
+                                    "en-GB": "A microfiber brown pillowcase is a soft and comfortable pillow cover made from synthetic fibers. The microfiber material is designed to be soft and silky to the touch, providing a comfortable and cozy sleeping experience.  The brown color of the pillowcase is typically warm and inviting, creating a cozy and relaxing atmosphere in a bedroom. It can also be a versatile color that matches well with a variety of other colors and decor styles.  Microfiber pillowcases are known for their durability and easy care. They are typically resistant to wrinkles and shrinkage, making them ideal for busy households. They are also hypoallergenic, making them a great option for people with allergies or sensitivities.  Overall, a microfiber brown pillowcase is a practical and comfortable choice for any bedroom. It is soft, durable, and easy to care for, providing a cozy and inviting sleeping environment for a restful night's sleep.",
+                                    "en-US": "A microfiber brown pillowcase is a soft and comfortable pillow cover made from synthetic fibers. The microfiber material is designed to be soft and silky to the touch, providing a comfortable and cozy sleeping experience.  The brown color of the pillowcase is typically warm and inviting, creating a cozy and relaxing atmosphere in a bedroom. It can also be a versatile color that matches well with a variety of other colors and decor styles.  Microfiber pillowcases are known for their durability and easy care. They are typically resistant to wrinkles and shrinkage, making them ideal for busy households. They are also hypoallergenic, making them a great option for people with allergies or sensitivities.  Overall, a microfiber brown pillowcase is a practical and comfortable choice for any bedroom. It is soft, durable, and easy to care for, providing a cozy and inviting sleeping environment for a restful night's sleep.",
+                                    "de-DE": "Ein brauner Mikrofaser-Kissenbezug ist ein weicher und bequemer Kissenbezug aus synthetischen Fasern. Das Mikrofasermaterial f\u00fchlt sich weich und seidig an und bietet ein komfortables und gem\u00fctliches Schlaferlebnis.  Die braune Farbe des Kissenbezugs ist typisch warm und einladend und schafft eine gem\u00fctliche und entspannende Atmosph\u00e4re in einem Schlafzimmer. Es kann auch eine vielseitige Farbe sein, die gut zu einer Vielzahl anderer Farben und Dekorstile passt.  Kissenbez\u00fcge aus Mikrofaser sind bekannt f\u00fcr ihre Strapazierf\u00e4higkeit und Pflegeleichtigkeit. Sie sind in der Regel knitter- und schrumpffrei und somit ideal f\u00fcr vielbesch\u00e4ftigte Haushalte. Sie sind auch hypoallergen, was sie zu einer gro\u00dfartigen Option f\u00fcr Menschen mit Allergien oder Empfindlichkeiten macht.  Insgesamt ist ein brauner Kissenbezug aus Mikrofaser eine praktische und bequeme Wahl f\u00fcr jedes Schlafzimmer. Es ist weich, strapazierf\u00e4hig und pflegeleicht und bietet eine gem\u00fctliche und einladende Schlafumgebung f\u00fcr einen erholsamen Schlaf."
+                                }
+                            },
+                            {
+                                "name": "color-filter",
+                                "value": {
+                                    "key": "#A020F0",
+                                    "label": {
+                                        "de-DE": "Lila",
+                                        "en-GB": "Purple",
+                                        "en-US": "Purple"
+                                    }
+                                }
+                            }
+                        ],
+                        "assets": [],
+                        "availability": {
+                            "isOnStock": true,
+                            "availableQuantity": 90,
+                            "version": 52,
+                            "id": "f3a99ef8-96af-4634-9b86-1b99c339be2c"
+                        }
+                    },
+                    "price": {
+                        "id": "889565a5-472b-429a-b29c-5cf695074d6c",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 899,
+                            "fractionDigits": 2
+                        },
+                        "country": "US"
+                    },
+                    "quantity": 2,
+                    "discountedPricePerQuantity": [],
+                    "taxRate": {
+                        "name": "US",
+                        "amount": 0.1,
+                        "includedInPrice": false,
+                        "country": "US",
+                        "id": "0AB1UIlA",
+                        "subRates": []
+                    },
+                    "perMethodTaxRate": [],
+                    "addedAt": "2023-11-13T23:04:18.226Z",
+                    "lastModifiedAt": "2023-11-13T23:04:18.226Z",
+                    "state": [{
+                        "quantity": 2,
+                        "state": {
+                            "typeId": "state",
+                            "id": "d93541e8-27cb-4367-81c0-f65e983c4a26"
+                        }
+                    }],
+                    "priceMode": "Platform",
+                    "lineItemMode": "Standard",
+                    "totalPrice": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 1798,
+                        "fractionDigits": 2
+                    },
+                    "taxedPrice": {
+                        "totalNet": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 1798,
+                            "fractionDigits": 2
+                        },
+                        "totalGross": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 1978,
+                            "fractionDigits": 2
+                        },
+                        "totalTax": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 180,
+                            "fractionDigits": 2
+                        }
+                    },
+                    "taxedPricePortions": []
+                },
+                {
+                    "id": "a5885e0f-7b4e-413e-893e-452cb08bf5d8",
+                    "productId": "ec957ca5-b787-47c5-8ff4-7a8822a3af93",
+                    "name": {
+                        "en-GB": "Stout Beer Glass",
+                        "de-DE": "Starkes Bierglas",
+                        "en-US": "Stout Beer Glass"
+                    },
+                    "productType": {
+                        "typeId": "product-type",
+                        "id": "63150e48-71e6-47b1-b68c-b45d68db3e8c",
+                        "version": 1
+                    },
+                    "variant": {
+                        "id": 1,
+                        "sku": "SBG-09",
+                        "key": "SBG-09",
+                        "prices": [{
+                                "id": "7f29a109-8c14-4d5a-b00c-7db88dd3e872",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "EUR",
+                                    "centAmount": 5699,
+                                    "fractionDigits": 2
+                                },
+                                "country": "DE"
+                            },
+                            {
+                                "id": "27b1d013-6849-47c3-adc2-ce3e78a56f37",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "GBP",
+                                    "centAmount": 5699,
+                                    "fractionDigits": 2
+                                },
+                                "country": "GB"
+                            },
+                            {
+                                "id": "595e0a67-07f0-4e43-9f55-55f98b9363bf",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "EUR",
+                                    "centAmount": 5699,
+                                    "fractionDigits": 2
+                                },
+                                "country": "GB"
+                            },
+                            {
+                                "id": "8070ddd3-4c84-4de8-9f62-b52c71a321f0",
+                                "value": {
+                                    "type": "centPrecision",
+                                    "currencyCode": "USD",
+                                    "centAmount": 5699,
+                                    "fractionDigits": 2
+                                },
+                                "country": "US"
+                            }
+                        ],
+                        "images": [{
+                            "url": "https:\/\/2eca75039cf911b9bbe5-79bfd3e36f011d786971804e873c4354.ssl.cf3.rackcdn.com\/Stout%20Beer%20Glass-fKjG9_Kd.jpeg",
+                            "dimensions": {
+                                "w": 3000,
+                                "h": 3000
+                            }
+                        }],
+                        "attributes": [{
+                                "name": "productspec",
+                                "value": {
+                                    "en-GB": "- Set includes 6 glasses"
+                                }
+                            },
+                            {
+                                "name": "product-description",
+                                "value": {
+                                    "en-GB": "A stout beer glass, also known as a \"pint glass,\" is a type of drinking glass that is designed specifically for serving and enjoying stout beers. It has a short, wide shape with a thick, heavy base that provides stability and balance.  The design of the stout beer glass is intended to enhance the drinking experience by allowing the full range of flavors and aromas of the beer to be appreciated. The wide opening of the glass allows the drinker to fully appreciate the color and clarity of the beer, while the heavy base helps to keep the beer from spilling or tipping over.  Overall, a stout beer glass is a classic and timeless type of drinking glass that is ideal for savoring the rich flavor and aroma of fine stout beers. Its simple yet elegant design makes it a popular choice for beer lovers and casual drinkers alike.",
+                                    "en-US": "A stout beer glass, also known as a \"pint glass,\" is a type of drinking glass that is designed specifically for serving and enjoying stout beers. It has a short, wide shape with a thick, heavy base that provides stability and balance.  The design of the stout beer glass is intended to enhance the drinking experience by allowing the full range of flavors and aromas of the beer to be appreciated. The wide opening of the glass allows the drinker to fully appreciate the color and clarity of the beer, while the heavy base helps to keep the beer from spilling or tipping over.  Overall, a stout beer glass is a classic and timeless type of drinking glass that is ideal for savoring the rich flavor and aroma of fine stout beers. Its simple yet elegant design makes it a popular choice for beer lovers and casual drinkers alike.",
+                                    "de-DE": "Ein Stout-Bierglas, auch als \"Pintglas\" bekannt, ist eine Art Trinkglas, das speziell zum Servieren und Genie\u00dfen von Stout-Bieren entwickelt wurde. Es hat eine kurze, breite Form mit einer dicken, schweren Basis, die f\u00fcr Stabilit\u00e4t und Gleichgewicht sorgt.  Das Design des Stout-Bierglases soll das Trinkerlebnis verbessern, indem es die volle Geschmacks- und Aromavielfalt des Bieres zur Geltung bringt. Die weite \u00d6ffnung des Glases erm\u00f6glicht es dem Trinker, die Farbe und Klarheit des Bieres voll und ganz zu sch\u00e4tzen, w\u00e4hrend der schwere Boden dazu beitr\u00e4gt, dass das Bier nicht versch\u00fcttet oder umkippt.  Insgesamt ist ein Stout-Bierglas ein klassisches und zeitloses Trinkglas, das sich ideal eignet, um den reichen Geschmack und das Aroma feiner Stout-Biere zu genie\u00dfen. Sein einfaches, aber elegantes Design macht es zu einer beliebten Wahl f\u00fcr Bierliebhaber und Gelegenheitstrinker gleicherma\u00dfen."
+                                }
+                            }
+                        ],
+                        "assets": [],
+                        "availability": {
+                            "isOnStock": true,
+                            "availableQuantity": 98,
+                            "version": 5,
+                            "id": "9956bac3-1873-4007-9737-dc6ffd0c49f7"
+                        }
+                    },
+                    "price": {
+                        "id": "8070ddd3-4c84-4de8-9f62-b52c71a321f0",
+                        "value": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 5699,
+                            "fractionDigits": 2
+                        },
+                        "country": "US"
+                    },
+                    "quantity": 1,
+                    "discountedPricePerQuantity": [],
+                    "taxRate": {
+                        "name": "US",
+                        "amount": 0.1,
+                        "includedInPrice": false,
+                        "country": "US",
+                        "id": "0AB1UIlA",
+                        "subRates": []
+                    },
+                    "perMethodTaxRate": [],
+                    "addedAt": "2023-11-13T23:04:29.213Z",
+                    "lastModifiedAt": "2023-11-13T23:04:29.213Z",
+                    "state": [{
+                        "quantity": 1,
+                        "state": {
+                            "typeId": "state",
+                            "id": "d93541e8-27cb-4367-81c0-f65e983c4a26"
+                        }
+                    }],
+                    "priceMode": "Platform",
+                    "lineItemMode": "Standard",
+                    "totalPrice": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 5699,
+                        "fractionDigits": 2
+                    },
+                    "taxedPrice": {
+                        "totalNet": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 5699,
+                            "fractionDigits": 2
+                        },
+                        "totalGross": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 6269,
+                            "fractionDigits": 2
+                        },
+                        "totalTax": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 570,
+                            "fractionDigits": 2
+                        }
+                    },
+                    "taxedPricePortions": []
+                }
+            ],
+            "cartState": "Ordered",
+            "totalPrice": {
+                "type": "centPrecision",
+                "currencyCode": "USD",
+                "centAmount": 7497,
+                "fractionDigits": 2
+            },
+            "taxedPrice": {
+                "totalNet": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 7497,
+                    "fractionDigits": 2
+                },
+                "totalGross": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 8247,
+                    "fractionDigits": 2
+                },
+                "taxPortions": [{
+                    "rate": 0.1,
+                    "amount": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 750,
+                        "fractionDigits": 2
+                    },
+                    "name": "US"
+                }],
+                "totalTax": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 750,
+                    "fractionDigits": 2
+                }
+            },
+            "country": "US",
+            "taxedShippingPrice": {
+                "totalNet": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 0,
+                    "fractionDigits": 2
+                },
+                "totalGross": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 0,
+                    "fractionDigits": 2
+                },
+                "taxPortions": [{
+                    "rate": 0.1,
+                    "amount": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 0,
+                        "fractionDigits": 2
+                    },
+                    "name": "US"
+                }],
+                "totalTax": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 0,
+                    "fractionDigits": 2
+                }
+            },
+            "shippingMode": "Single",
+            "shippingInfo": {
+                "shippingMethodName": "Standard Delivery",
+                "price": {
+                    "type": "centPrecision",
+                    "currencyCode": "USD",
+                    "centAmount": 10000,
+                    "fractionDigits": 2
+                },
+                "shippingRate": {
+                    "price": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 10000,
+                        "fractionDigits": 2
+                    },
+                    "freeAbove": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 20000,
+                        "fractionDigits": 2
+                    },
+                    "tiers": []
+                },
+                "taxRate": {
+                    "name": "US",
+                    "amount": 0.1,
+                    "includedInPrice": false,
+                    "country": "US",
+                    "id": "0AB1UIlA",
+                    "subRates": []
+                },
+                "taxCategory": {
+                    "typeId": "tax-category",
+                    "id": "47cd33ed-af77-4949-a2df-236132a4c8d0"
+                },
+                "deliveries": [],
+                "shippingMethod": {
+                    "typeId": "shipping-method",
+                    "id": "f3656da5-206b-4208-a07d-17a56e7ca7dd"
+                },
+                "discountedPrice": {
+                    "value": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 0,
+                        "fractionDigits": 2
+                    },
+                    "includedDiscounts": [{
+                        "discount": {
+                            "typeId": "cart-discount",
+                            "id": "b9e6bcbe-19f9-4497-b458-f9518b43d39e"
+                        },
+                        "discountedAmount": {
+                            "type": "centPrecision",
+                            "currencyCode": "USD",
+                            "centAmount": 10000,
+                            "fractionDigits": 2
+                        }
+                    }]
+                },
+                "taxedPrice": {
+                    "totalNet": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 0,
+                        "fractionDigits": 2
+                    },
+                    "totalGross": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 0,
+                        "fractionDigits": 2
+                    },
+                    "totalTax": {
+                        "type": "centPrecision",
+                        "currencyCode": "USD",
+                        "centAmount": 0,
+                        "fractionDigits": 2
+                    }
+                },
+                "shippingMethodState": "MatchesCart"
+            },
+            "shippingAddress": {
+                "id": "b706DdYz",
+                "firstName": "Tester",
+                "lastName": "Forter",
+                "streetName": "Montgomery",
+                "streetNumber": "",
+                "postalCode": "83003",
+                "city": "San Francisco",
+                "region": "CA",
+                "country": "US",
+                "company": "Forter",
+                "apartment": "Ste. 2220",
+                "phone": "15598754654",
+                "mobile": "15598754654",
+                "email": "tester@forter.com"
+            },
+            "shipping": [],
+            "customLineItems": [],
+            "discountCodes": [],
+            "directDiscounts": [],
+            "custom": {
+                "type": {
+                    "typeId": "type",
+                    "id": "c45c2887-05b5-482a-bc30-05e3dfabf223"
+                },
+                "fields": {
+                    "customerUserAgent": "Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36",
+                    "forterToken": "02b78690cd7e43afbdeb9f3bf219eb2c_1699814785233__UDF43-m4_15ck_tt",
+                    "customerIP": "127.0.0.1"
+                }
+            },
+            "paymentInfo": {
+                "payments": [{
+                    "typeId": "payment",
+                    "id": "d7d64f80-37aa-4973-b4ec-9dfeeea6f334"
+                }]
+            },
+            "inventoryMode": "None",
+            "taxMode": "Platform",
+            "taxRoundingMode": "HalfEven",
+            "taxCalculationMode": "LineItemLevel",
+            "refusedGifts": [],
+            "origin": "Merchant",
+            "billingAddress": {
+                "id": "frSRCOgI",
+                "firstName": "Tester",
+                "lastName": "Forter",
+                "streetName": "Montgomery",
+                "streetNumber": "",
+                "postalCode": "94104",
+                "city": "San Francisco",
+                "region": "CA",
+                "state": "",
+                "country": "US",
+                "company": "Forter",
+                "apartment": "Ste. 1110",
+                "phone": "15557654321",
+                "mobile": "15557654321",
+                "email": "tester@forter.com"
+            },
+            "itemShippingAddresses": [],
+            "store": {
+                "typeId": "store",
+                "key": "the-good-store"
+            },
+            "totalLineItemQuantity": 3
+        }
+    },
+    "custom": {
+        "type": {
+            "typeId": "type",
+            "id": "c45c2887-05b5-482a-bc30-05e3dfabf223"
+        },
+        "fields": {
+            "customerIP": "127.0.0.1",
+            "customerUserAgent": "Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/116.0.0.0 Safari\/537.36",
+            "forterToken": "02b78690cd7e43afbdeb9f3bf219eb2c_1699814785233__UDF43-m4_15ck_tt"
+        }
+    },
+    "paymentInfo": {
+        "payments": []
+    },
+    "billingAddress": {
+        "id": "frSRCOgI",
+        "firstName": "Tester",
+        "lastName": "Forter",
+        "streetName": "Montgomery",
+        "streetNumber": "",
+        "postalCode": "94104",
+        "city": "San Francisco",
+        "region": "CA",
+        "state": "",
+        "country": "US",
+        "company": "Forter",
+        "apartment": "Ste. 1110",
+        "phone": "15557654321",
+        "mobile": "15557654321",
+        "email": "tester@forter.com"
+    },
+    "itemShippingAddresses": [],
+    "refusedGifts": [],
+    "store": {
+        "typeId": "store",
+        "key": "the-good-store"
+    }
+}

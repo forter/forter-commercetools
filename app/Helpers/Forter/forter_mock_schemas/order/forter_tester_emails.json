@@ -1,0 +1,20 @@
+{
+    "customerEmail": "approve@forter.com",
+    "shippingAddress": {
+        "email": "approve@forter.com"
+    },
+    "billingAddress": {
+        "email": "approve@forter.com"
+    },
+    "cart": {
+        "obj": {
+            "customerEmail": "approve@forter.com",
+            "shippingAddress": {
+                "email": "approve@forter.com"
+            },
+            "billingAddress": {
+                "email": "approve@forter.com"
+            }
+        }
+    }
+}

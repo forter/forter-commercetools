@@ -1,0 +1,27 @@
+{
+    "notificationType": "Message",
+    "projectKey": "forter-commercetools-app-test",
+    "id": "forter-commercetools-app-test",
+    "version": 1,
+    "sequenceNumber": 1,
+    "resource": {
+        "typeId": "order",
+        "id": "855cb6c0-0b80-4fd6-8b53-2e7f0b51094d"
+    },
+    "resourceVersion": 1,
+    "resourceUserProvidedIdentifiers": {
+        "orderNumber": "forter-commercetools-app-unit-test"
+    },
+    "type": "OrderCreated",
+    "order": {},
+    "createdAt": "2023-10-02T12:59:34.040Z",
+    "lastModifiedAt": "2023-10-02T12:59:34.040Z",
+    "createdBy": {
+        "clientId": "forter-commercetools-app-test",
+        "isPlatformClient": false
+    },
+    "lastModifiedBy": {
+        "clientId": "forter-commercetools-app-test",
+        "isPlatformClient": false
+    }
+}

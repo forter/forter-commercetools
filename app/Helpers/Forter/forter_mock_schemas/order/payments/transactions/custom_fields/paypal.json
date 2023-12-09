@@ -1,0 +1,24 @@
+{
+    "paymentInfo": {
+        "payments": [{
+            "obj": {
+                "custom": {
+                    "fields": {
+                        "authorizationId": "2WC75407LV7300439",
+                        "payerAccountCountry": "US",
+                        "payerAddressStatus": "CONFIRMED",
+                        "payerEmail": "tester@forter.com",
+                        "payerId": "FD000A45P",
+                        "payerStatus": "VERIFIED",
+                        "gatewayTransactionId": "fjdsS46sdklFd20",
+                        "paymentId": "PAY-0MB00000KR8073311KZSDEYA",
+                        "paymentStatus": "COMPLETED",
+                        "protectionEligibility": "ELIGIBLE",
+                        "fullPaypalResponsePayload": "{}",
+                        "customFieldNameForFullPaypalResponsePayload": "{\"AAA\":\"BBB\"}"
+                    }
+                }
+            }
+        }]
+    }
+}

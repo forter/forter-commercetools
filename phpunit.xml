@@ -9,8 +9,8 @@
             <directory>tests/Unit</directory>
         </testsuite>
         <testsuite name="Feature">
-            <directory>tests/Feature</directory>
-            <directory suffix=".php">tests/Feature/Forter/Suite</directory>
+            <!--directory>tests/Feature</directory-->
+            <directory suffix=".php">tests/Feature/Forter</directory>
         </testsuite>
     </testsuites>
     <source>
@@ -27,5 +27,10 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
+        <env name="FORTER_IS_ENABLED" value="true"/>
+        <env name="FORTER_PRE_ORDER_VALIDATION_ENABLED" value="true"/>
+        <env name="FORTER_POST_ORDER_VALIDATION_ENABLED" value="true"/>
+        <env name="FORTER_USE_ASYNC_QUEUE_FOR_JOBS" value="false"/>
+        <env name="FORTER_RECOMMENDATION_HANDLERS_ENABLED" value="false"/>
     </php>
 </phpunit>
