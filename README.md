@@ -3,7 +3,7 @@
 
 ---
 
-{{ Placeholder for a heading text about the app from Forter }}
+This app integrates between Commercetools and Forter's Fraud Solution.
 
 ---
 
