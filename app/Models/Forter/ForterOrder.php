@@ -225,6 +225,18 @@ class ForterOrder extends ForterCommercetoolsModel
     }
 
     /**
+     * @method getTotalPrice
+     * @return mixed
+     */
+    public function getTotalPrice($field)
+    {
+        if ($field) {
+            return isset($this->_data['totalPrice'][$field]) ? $this->_data['totalPrice'][$field] : null;
+        }
+        return isset($this->_data['totalPrice']) ? $this->_data['totalPrice'] : [];
+    }
+
+    /**
      * @method getShippingInfo
      * @return mixed
      */

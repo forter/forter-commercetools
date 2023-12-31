@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace App\Services\Commercetools;
 
+use Illuminate\Support\Carbon;
 use Commercetools\Api\Models\Order\OrderFromCartDraftBuilder;
 use Commercetools\Api\Models\Order\OrderSetCustomTypeActionBuilder;
 use Commercetools\Api\Models\Order\OrderUpdateActionBuilder;
@@ -22,7 +23,7 @@ use Commercetools\Exception\NotFoundException;
 
 class CommercetoolsOrdersService extends CommercetoolsClientService
 {
-    public static function getAll($expand = null, $limit = null)
+    public static function get($expand = null, $limit = null, $returnBuilder = false)
     {
         $request = parent::getApiClientBuilder()
             ->orders()->get();
@@ -32,7 +33,11 @@ class CommercetoolsOrdersService extends CommercetoolsClientService
         }
 
         if ($limit) {
-            $request = $request->withLimit(1);
+            $request = $request->withLimit($limit);
+        }
+
+        if ($returnBuilder) {
+            return $request;
         }
 
         return $request->execute();
@@ -64,15 +69,10 @@ class CommercetoolsOrdersService extends CommercetoolsClientService
 
     public static function getOrderByPaymentId($paymentId, $expand = null)
     {
-        $request = parent::getApiClientBuilder()
-            ->orders()->get()
+        $request = self::get($expand, 1, true);
+        $request = $request
             ->withWhere('paymentInfo(payments(id=:paymentId))')
-            ->withPredicateVar("paymentId", $paymentId)
-            ->withLimit(1);
-
-        if ($expand) {
-            $request = $request->withExpand($expand);
-        }
+            ->withPredicateVar("paymentId", $paymentId);
 
         $results = $request->execute()->getResults();
         return !empty($results) ? $results[0] : false;

@@ -28,7 +28,7 @@ use Commercetools\Exception\NotFoundException;
 
 class CommercetoolsTypesService extends CommercetoolsClientService
 {
-    public static function getAll($expand = null, $limit = null)
+    public static function get($expand = null, $limit = null)
     {
         $request = parent::getApiClientBuilder()
             ->types()->get();
@@ -38,7 +38,7 @@ class CommercetoolsTypesService extends CommercetoolsClientService
         }
 
         if ($limit) {
-            $request = $request->withLimit(1);
+            $request = $request->withLimit($limit);
         }
 
         return $request->execute();

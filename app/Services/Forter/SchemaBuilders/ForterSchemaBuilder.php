@@ -62,6 +62,27 @@ class ForterSchemaBuilder
         ];
     }
 
+    /**
+     * Build order schema for historical data upload
+     * @method buildHistoricalOrderSchema
+     * @param  ForterOrder     $order
+     * @return array
+     */
+    public static function buildHistoricalOrderSchema(ForterOrder $order)
+    {
+        return [
+            'orderId' => $order->getForterOrderId(),
+            'orderType' => 'WEB',
+            'checkoutTime' => $order->getCreatedAtTimestampMs(),
+            'connectionInformation' => self::buildOrderConnectionInformationSchema($order),
+            'totalAmount' => self::buildOrderTotalAmountSchema($order),
+            'cartItems' => self::buildOrderCartItemsSchema($order),
+            'payment' => self::buildOrderPaymentSchema($order),
+            'primaryDeliveryDetails' => self::buildOrderPrimaryDeliveryDetailsSchema($order),
+            'primaryRecipient' => self::buildOrderPrimaryRecipientSchema($order),
+        ];
+    }
+
     //========================================================================//
 
     public static function buildOrderConnectionInformationSchema(ForterOrder $order)
@@ -153,7 +174,7 @@ class ForterSchemaBuilder
         $shippingMethodName = !empty($shippingInfo['shippingMethodName']) ? $shippingInfo['shippingMethodName'] : 'unknown';
         $centAmount = !empty($shippingInfo['price']['centAmount']) ? $shippingInfo['price']['centAmount'] : '000';
         $fractionDigits = !empty($shippingInfo['price']['fractionDigits']) ? $shippingInfo['price']['fractionDigits'] : 2;
-        $currencyCode = !empty($shippingInfo['price']['currencyCode']) ? $shippingInfo['price']['currencyCode'] : (!empty($order['taxedPrice']['totalGross']['currencyCode']) ? $order['taxedPrice']['totalGross']['currencyCode'] : $order['totalPrice']['currencyCode']);
+        $currencyCode = !empty($shippingInfo['price']['currencyCode']) ? $shippingInfo['price']['currencyCode'] : (!empty($order->getTaxedPriceTotalGross('currencyCode')) ? $order->getTaxedPriceTotalGross('currencyCode') : $order->getTotalPrice('currencyCode'));
         return [
             'deliveryMethod' => $shippingMethodName, // Name of the shipping method
             'deliveryPrice' => [

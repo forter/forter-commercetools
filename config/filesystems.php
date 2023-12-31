@@ -36,6 +36,12 @@ return [
             'throw' => false,
         ],
 
+        'local_forter' => [
+            'driver' => 'local',
+            'root' => storage_path('app/forter'),
+            'throw' => true,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
