@@ -29,7 +29,7 @@ use Commercetools\Exception\NotFoundException;
 
 class CommercetoolsPaymentsService extends CommercetoolsClientService
 {
-    public static function getAll($expand = null, $limit = null)
+    public static function get($expand = null, $limit = null)
     {
         $request = parent::getApiClientBuilder()
             ->payments()->get();
@@ -39,7 +39,7 @@ class CommercetoolsPaymentsService extends CommercetoolsClientService
         }
 
         if ($limit) {
-            $request = $request->withLimit(1);
+            $request = $request->withLimit($limit);
         }
 
         return $request->execute();

@@ -73,12 +73,12 @@ class ForterSetupService
                     throw new \Exception("Missing required Commercetools config value: `{$configKey}`");
                 }
             }
-            $orders = CommercetoolsOrdersService::getAll(null, 1)->getCount();
-            $carts = CommercetoolsCartsService::getAll(null, 1)->getCount();
-            $payments = CommercetoolsPaymentsService::getAll(null, 1)->getCount();
-            $types = CommercetoolsTypesService::getAll(null, 1)->getCount();
-            $extensions = CommercetoolsExtensionsService::getAll(null, 1)->getCount();
-            $subscriptions = CommercetoolsSubscriptionsService::getAll(null, 1)->getCount();
+            $orders = CommercetoolsOrdersService::get(null, 1)->getCount();
+            $carts = CommercetoolsCartsService::get(null, 1)->getCount();
+            $payments = CommercetoolsPaymentsService::get(null, 1)->getCount();
+            $types = CommercetoolsTypesService::get(null, 1)->getCount();
+            $extensions = CommercetoolsExtensionsService::get(null, 1)->getCount();
+            $subscriptions = CommercetoolsSubscriptionsService::get(null, 1)->getCount();
             return true;
         } catch (\Exception $e) {
             Log::error("[ForterSetupService::isValidCommercetoolsCredentials] [ERROR] " . $e->getMessage(), ['exception' => $e]);

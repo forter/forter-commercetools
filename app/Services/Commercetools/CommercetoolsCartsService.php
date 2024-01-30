@@ -22,7 +22,7 @@ use Commercetools\Exception\NotFoundException;
 
 class CommercetoolsCartsService extends CommercetoolsClientService
 {
-    public static function getAll($expand = null, $limit = null)
+    public static function get($expand = null, $limit = null)
     {
         $request = parent::getApiClientBuilder()
             ->carts()->get();
@@ -32,7 +32,7 @@ class CommercetoolsCartsService extends CommercetoolsClientService
         }
 
         if ($limit) {
-            $request = $request->withLimit(1);
+            $request = $request->withLimit($limit);
         }
 
         return $request->execute();
