@@ -123,7 +123,7 @@ class ForterHistoricalDataUpload extends Command
                             try {
                                 //$this->line("  Preparing Commercetools order ID: {$order->getId()}");
                                 $orderModel = ForterOrder::getInstance($order);
-                                if (0 && !empty($orderModel->getForterResponse())) {
+                                if (!empty($orderModel->getForterResponse())) {
                                     $skippedAlreadySent[] = $order->getId();
                                 } else {
                                     $orderSchema = ForterSchemaBuilder::buildHistoricalOrderSchema($orderModel);
@@ -160,30 +160,6 @@ class ForterHistoricalDataUpload extends Command
 
                     $this->info("The file in ready and can be found on: " . Storage::disk('local_forter')->path($filename));
                     $this->info("Please proceed by uploading it manually to your dedicated folder on Forter's AWS (as instructed on your Forter Portal)");
-
-                /*  Preparation for auto AWS upload
-
-                $upload = $this->choice(
-                    "Upload to Forter's AWS?",
-                    ['Yes (and I have the credentials ready)', 'No (I want to upload it manually)'],
-                    1
-                );
-
-                switch ($upload) {
-                    case 0:
-                        // Ask for credentials and upload the prepared file to Forter's AWS
-                        $this->comment("Automatic upload to AWS is not available at the moment. ");
-                        $this->info("The file in ready and can be found on: " . Storage::disk('local_forter')->path($filename));
-                        $this->info("Please proceed by uploading it manually to your dedicated folder on Forter's AWS (as instructed on your Forter Portal)");
-                        break;
-
-                    default:
-                        $this->info("The file in ready and can be found on: " . Storage::disk('local_forter')->path($filename));
-                        $this->info("Please proceed by uploading it manually to your dedicated folder on Forter's AWS (as instructed on your Forter Portal)");
-                        break;
-                }
-
-                */
                 } else {
                     $this->comment("No file has been created.");
                 }
